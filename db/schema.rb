@@ -10,12 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_03_182719) do
+ActiveRecord::Schema.define(version: 2022_03_03_204245) do
 
   create_table "mangas", force: :cascade do |t|
     t.string "title"
     t.string "author"
     t.string "publisher"
+    t.string "image"
+    t.string "activity"
   end
 
   create_table "reviews", force: :cascade do |t|
