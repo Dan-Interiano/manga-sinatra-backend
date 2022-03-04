@@ -15,4 +15,14 @@ class ApplicationController < Sinatra::Base
     goods.destroy
     goods.to_json 
   end
+  post '/mangas' do
+    goods = Manga.create(
+      title: params[:title],
+      author: params[:author],
+      publisher: params[:publisher],
+      image: params[:image],
+      activity: params[:activity]
+    )
+    goods.to_json
+  end
 end
