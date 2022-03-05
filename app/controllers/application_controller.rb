@@ -4,7 +4,7 @@ class ApplicationController < Sinatra::Base
   # Add your routes here
   get '/mangas' do
     goods = Manga.all 
-    goods.to_json
+    goods.to_json(include: :reviews)
   end
   get '/mangas/:id' do
     goods = Manga.find(params[:id])
@@ -22,6 +22,22 @@ class ApplicationController < Sinatra::Base
       publisher: params[:publisher],
       image: params[:image],
       activity: params[:activity]
+    )
+    goods.to_json
+  end
+  # get '/reviews/:id' do
+  #   goods = Review.find(params[:id])
+  #   goods.to_json
+  # end
+  get '/reviews' do
+    goods = Manga.all 
+    goods.to_json(include: :reviews)
+  end
+  post '/reviews' do
+    goods = Review.create(
+      manga_id: params[:manga_id],
+      comment: params[:comment],
+      score: params[:score]
     )
     goods.to_json
   end

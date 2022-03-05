@@ -17,4 +17,9 @@ Manga.create(title: "Dandadan", author: "Yukinobu Tatsu", publisher: "Shueisha",
 Manga.create(title: "Fire Force", author: "Atsushi Okubo", publisher: "Kodansha", image: "https://flxt.tmsimg.com/assets/p17132369_b_h9_aa.jpg", activity: "Finished")
 Manga.create(title: "Solo Leveling", author: "Chugong", publisher: "D&C Media", image: "https://www.dualshockers.com/static/uploads/2021/05/Solo-Leveling-Anime-Are-we-Getting-An-Anime-Adaptation-Of-The-Hit-Manhwa-1140x641.jpg", activity: "Finished")
 
+Review.create(score: 5, comment: "Supreme World Building Adventure Series", manga_id: 1, title: "Loved it!")
+Review.create(score: 4, comment: "Great action, with an array of cool characters", manga_id: 3, title: "Ninjas are so cool!")
+Review.create(score: 4, comment: "One of the best action series, with great comedy and fashion!", manga_id: 2, title: "Ichigo is the goat!")
+Review.create(score: 5, comment: "Best shounen series out in the game right now and always!", manga_id: 1, title: "Most honest review yet!")
+Review.create(score: 4, comment: "Love the fashion styles that Tite Kubo uses on his characters!", manga_id: 2, title: "Ichigo + Orihime!")
 puts "✅ Done seeding!"
